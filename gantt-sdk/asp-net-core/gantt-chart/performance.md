@@ -54,38 +54,6 @@ Set the [autoCalculateDateScheduling](https://help.syncfusion.com/cr/aspnetcore-
 
 When integrating images or template elements into Gantt columns, use the [Column Template](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/columns/column-template) feature instead of customizing data through the [rowDataBound](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_RowDataBound) or [queryCellInfo](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_QueryCellInfo) events. These events trigger for each row and cell, potentially causing rendering delays and element persistence issues over time.
 
-### Performance benchmarks
-
-The following tables show typical load times for various Gantt configurations, comparing non-virtualized and virtualized scenarios:
-
-**Test environment**
-
-- Component Version: Syncfusion ASP.NET Core Gantt 35.1.27
-- .NET Runtime: .NET 8
-- Browser: Edge 152
-- Operating System: Windows 11
-- CPU: 11th Gen Intel® Core™ i5-1135G7 @ 2.40GHz
-- RAM: 16GB
-
-**Non-virtualized scenario (2,500 tasks)**
-
-| Scenario                        | Load time (seconds) |
-|---------------------------------|---------------------|
-| Default hierarchy (Parent-Child) | 4.5                 |
-| + Predecessor                   | 6.7                 |
-| + Resources                     | 7.5                 |
-| + Split taskbars                | 6.8                 |
-
-**Virtualized scenario (25,000 tasks)**
-
-| Scenario                        | Load time (seconds) |
-|---------------------------------|---------------------|
-| Default hierarchy (Parent-Child) | 3.9                 |
-| + Predecessor                   | 5.9                 |
-| + Resources                     | 6.5                 |
-| + Split taskbars                | 10.6                |
-
-
 ## Avoiding maxJsonLength errors with large datasets
 
 The Gantt Chart control operates on a client-server basis, sending data as JSON objects. Large JSON object serialization can cause MaxJsonLength errors. Resolve this by increasing the maximum length for JSON serialization in your web.config file or at the deserialization point.
