@@ -168,11 +168,13 @@ In the following sample, the background color is set for **Progress** column in 
 {% endhighlight %}
 {% endtabs %}
 
+![Cell formatting](../images/cell-formatting.png)
+
 ## Timeline cell formatting
 
 Timeline cells in the exported PDF document can be customized or formatted using the [pdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_PdfQueryTimelineCellInfo) event.
 
-In the following sample, the header background color is set for timeline cells in the exported document by using the `args.headerBackgroundColor` property.
+In the following sample, the header background color is set for timeline cells in the exported document by using the `args.timelineCell.backgroundColor` property.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -182,6 +184,8 @@ In the following sample, the header background color is set for timeline cells i
 {% include code-snippet/gantt-sdk/asp-net-core/gantt-chart/pdf-export/timelinecustomization/timeline-customization.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+![Timeline cell formatting](../images/timeline-cell-formatting.png)
 
 ## Taskbar formatting
 
@@ -198,7 +202,9 @@ In the following sample, the taskbar background color is customized in the chart
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Gantt chart appearance in PDF export
+![Taskbar formatting](../images/taskbar-formatting.png)
+
+<!-- ## Customize Gantt chart appearance in PDF export
 
 PDF export allows to customize the Gantt chart's appearance in the exported PDF documents. To customize the appearance of Gantt charts in exported PDF documents, define `ganttStyle` within `pdfExportProperties`. By using `ganttStyle`, can customize `columnHeader`, `fontFamily`, `cell`, `taskbar`, `label`, `timeline`, `chartGridLineColor`, `connectorLineColor`, `criticalConnectorLineColor`, `footer`, `font`, `eventMarker` and `holiday` regardless of the theme.
 
@@ -209,7 +215,7 @@ PDF export allows to customize the Gantt chart's appearance in the exported PDF 
 {% highlight c# tabtitle="Index.cshtml.cs" %}
 {% include code-snippet/gantt-sdk/asp-net-core/gantt-chart/pdf-export/customtheme/custom-theme.cs %}
 {% endhighlight %}
-{% endtabs %}
+{% endtabs %} -->
 
 ## Customize split taskbar segment colors in PDF
 
@@ -225,6 +231,8 @@ The `taskSegmentStyles` property contains a collection of style properties for t
 {% include code-snippet/gantt-sdk/asp-net-core/gantt-chart/pdf-export/pdf-customize-segment/pdf-customize-segment.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+![Split taskbar segment](../images/split-taskbar-segment.png)
 
 ## Exporting with templates
 
@@ -245,6 +253,8 @@ In the following sample, the hyperlinks and images are exported to PDF using the
 {% endhighlight %}
 {% endtabs %}
 
+![Exporting with column template](../images/exporting-column-template.png)
+
 ### Exporting with taskbar template
 
 The PDF export functionality allows to export taskbar templates that include `images` and `text` to an PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_PdfQueryTaskbarInfo) event. Taskbars in the exported PDF document can be customized or formatted using the `PdfQueryTaskbarInfo` event for parent taskbar templates, taskbar templates and milestone templates.
@@ -261,6 +271,8 @@ In the following sample, taskbar templates with images and text are exported to 
 {% include code-snippet/gantt-sdk/asp-net-core/gantt-chart/pdf-export/pdfexport-taskbar-Template/pdfexport-taskbar-Template.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+![Exporting with taskbar template](../images/exporting-with-taskbar-template.png)
 
 ### Exporting with task label template
 
@@ -295,6 +307,8 @@ In the following sample, header template with images and text are exported to PD
 {% include code-snippet/gantt-sdk/asp-net-core/gantt-chart/pdf-export/pdfexport-header-Template/pdfexport-header-Template.cs %}
 {% endhighlight %}
 {% endtabs %}
+
+![Exporting with header template](../images/exporting-with-header-template.png)
 
 ## See also
 

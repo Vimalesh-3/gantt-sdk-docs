@@ -21,6 +21,8 @@
             }
         }
         function pdfQueryTimelineCellInfo(args) {
-            args.timelineCell.backgroundColor = new ej.pdfexport.PdfColor(240, 248, 255);
+            args.timelineCell.backgroundColor.redColor = 240;
+            args.timelineCell.backgroundColor.greenColor = 248;
+            args.timelineCell.backgroundColor.blueColor = 255;
         }
         </script>
