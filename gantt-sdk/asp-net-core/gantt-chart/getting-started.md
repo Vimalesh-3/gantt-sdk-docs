@@ -21,9 +21,9 @@ This guide demonstrates how to create an ASP.NET Core application, configure tas
 
 Ensure the following prerequisites are installed:
 
-- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://code.visualstudio.com) with the [.NET SDK](https://dotnet.microsoft.com/download) (.NET 8 or later recommended)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://code.visualstudio.com) with the [.NET SDK](https://dotnet.microsoft.com/en-us/download) (.NET 8 or later recommended)
 - Basic knowledge of ASP.NET Core Razor Pages
-- A valid Syncfusion<sup style="font-size:70%">&reg;</sup> license key for commercial use. You can obtain a key from your [Syncfusion account](https://www.syncfusion.com/account) and register it as shown in the [licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/license-key-registration).
+- A valid Syncfusion<sup style="font-size:70%">&reg;</sup> license key for commercial use. You can obtain a key from your [Syncfusion account](https://www.syncfusion.com/account) and register it as shown in the [licensing documentation](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application).
 
 To get started quickly with the ASP.NET Core Gantt control, you can check out this video:
 

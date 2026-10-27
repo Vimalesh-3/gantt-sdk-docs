@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ASP.NET Core Gantt Chart Overview - Features & Capabilities | Syncfusion
-description: Learn how to use Syncfusion ASP.NET Core Gantt Chart features for task management, timeline visualization, resource allocation, and project scheduling in one guide.
+title: Overview of ASP.NET Core Gantt Chart | Syncfusion
+description: Learn how to use Syncfusion ASP.NET Core Gantt Chart for task management, timeline visualization, resource allocation, and project scheduling.
 keywords: asp.net core gantt chart overview, features, capabilities, task management, timeline, resource allocation, project scheduling
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/overview
 platform: gantt-sdk

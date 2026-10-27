@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Markers in ASP.NET Core Gantt Chart | Visual Indicators | Syncfusion
-description: Learn how to highlight milestones and significant dates in Syncfusion ASP.NET Core Gantt Chart with data markers for visual context within individual task timelines.
+title: Data Markers in ASP.NET Core Gantt Chart | Syncfusion
+description: Learn how to highlight milestones and significant dates in Syncfusion ASP.NET Core Gantt Chart with data markers for visual context in task timelines.
 keywords: asp.net core gantt data markers, milestones, visual indicators, task events, syncfusion gantt
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/data-markers
 platform: gantt-sdk

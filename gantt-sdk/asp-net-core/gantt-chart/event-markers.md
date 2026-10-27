@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Event Markers in ASP.NET Core Gantt Chart | Syncfusion
-description: Learn how to highlight critical project events in Syncfusion ASP.NET Core Gantt Chart with vertical event markers spanning the timeline for milestones and deadlines.
+description: Learn how to highlight critical project events in Syncfusion ASP.NET Core Gantt Chart with vertical event markers spanning the timeline for deadlines.
 keywords: asp.net core gantt event markers, timeline indicators, project milestones, vertical markers, syncfusion gantt
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/event-markers
 platform: gantt-sdk

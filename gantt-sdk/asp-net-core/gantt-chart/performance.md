@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance in ASP.NET Core Gantt Chart | Syncfusion
-description: Learn about performance optimization techniques in Syncfusion ASP.NET Core Gantt Chart when dealing with large datasets and improving rendering speed.
+description: Learn how to optimize performance with virtual scrolling, lazy loading, and best practices in Syncfusion ASP.NET Core Gantt Chart.
 keywords: asp.net core gantt performance, large data handling, virtual scrolling, lazy loading, optimization, syncfusion gantt chart
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/performance
 platform: gantt-sdk
