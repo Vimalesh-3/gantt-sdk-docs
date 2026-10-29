@@ -54,7 +54,7 @@ The WebMCP extension is now configured and ready to interact with WebMCP-enabled
 Follow these steps to integrate WebMCP support into Syncfusion® Angular components. The following example uses the Angular Gantt Chart component.
 
 ### Step 1: Create an application
-Create an Angular application and integrate the Syncfusion® Angular Gantt Chart component by following the [Getting Started with Angular Gantt Chart](https://help.syncfusion.com/gantt-sdk/angular/gantt-chart/getting-started) guide. After completing the setup, follow the steps below to enable WebMCP integration.
+Create an Angular application and integrate the Syncfusion® Angular Gantt Chart component by following the [Getting Started with Gantt Chart](https://help.syncfusion.com/gantt-sdk/angular/gantt-chart/getting-started) guide. After completing the setup, follow the steps below to enable WebMCP integration.
 
 ### Step 2: Enable WebMCP support
 Import the WebMcpGantt module and inject it into the component to make WebMCP functionality available.
