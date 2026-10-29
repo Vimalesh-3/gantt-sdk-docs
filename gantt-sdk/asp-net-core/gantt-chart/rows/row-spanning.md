@@ -28,6 +28,6 @@ In the example below, the **Soil test approval** cell spans across two rows in t
 {% endhighlight %}
 {% endtabs %}
 
-![Row Spanning](images/row-spanning-placeholder.png)
+![Row Spanning](../images/row-spanning.png)
 
 > * You can use both [rowSpan](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.QueryCellInfoEventArgs.html#Syncfusion_EJ2_Gantt_QueryCellInfoEventArgs_RowSpan) and [colSpan](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.QueryCellInfoEventArgs.html#Syncfusion_EJ2_Gantt_QueryCellInfoEventArgs_ColSpan) together to merge grid cells vertically and horizontally.

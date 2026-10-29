@@ -28,7 +28,7 @@ Task constraints enhance project planning with the following advantages:
 
 ## Understand task constraint types
 
-The [constraintType](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.GanttTaskFields.html#Syncfusion_EJ2_Gantt_GanttTaskFields_ConstraintType) property accepts one of eight numeric values from the [ConstraintType](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.ConstraintType.html) enum, each defining a specific scheduling rule. These can be specified using the corresponding numeric value (e.g., 0). The enum values are typically set in the `constraintType` mapping in the task fields or directly in the data source. Below is a table summarizing the constraint types, their descriptions, example use cases, and their corresponding numeric enum values:
+The [constraintType](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.GanttTaskFields.html#Syncfusion_EJ2_Gantt_GanttTaskFields_ConstraintType) property accepts one of eight numeric values from the [constraintType](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.ConstraintType.html) enum, each defining a specific scheduling rule. These can be specified using the corresponding numeric value (e.g., 0). The enum values are typically set in the `constraintType` mapping in the task fields or directly in the data source. Below is a table summarizing the constraint types, their descriptions, example use cases, and their corresponding numeric enum values:
 
 | Constraint Type               | Numeric Enum Value | Description                                                                        | Example Use Case                                        |
 | ----------------------------- | ------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -83,7 +83,7 @@ The following example applies a **MustStartOn** constraint:
 {% endhighlight %}
 {% endtabs %}
 
-![Task Constraints](images/task-constraints-placeholder.png)
+![Task Constraints](./images/task-constraints.png)
 
 This code sets a task to start on July 1, 2025, with the taskbar reflecting the constraint.
 
@@ -122,7 +122,7 @@ The following example disables the **MustStartOn** violation popup:
 {% endhighlight %}
 {% endtabs %}
 
-![Handle Constraint Violations](images/constraint-violation-placeholder.png)
+![Handle Constraint Violations](./images/task-constraints-cs2.gif)
 
 ## See also
 

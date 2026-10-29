@@ -26,7 +26,7 @@ To enable column reordering, set the [allowReordering](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-![Column Reordering with Drag and Drop Support](images/column-reordering-with-drag-and-drop-support-in-asp-net-core-gantt-chart-placeholder.png)
+![Column Reordering with Drag and Drop Support](../images/column-reorder.png)
 
 > * You can modify the appearance of column headers during drag-and-drop using the [columnDrag](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_Columndrag) and [columnDrop](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_Columndrop) events.
 > * After columns are reordered, the visual column index changes but field names remain the same. If your logic references column indices (e.g., `gantt.treeGrid.columns[0]`), update those references after reordering.
@@ -49,7 +49,7 @@ The following example demonstrates how reordering is restricted for the **TaskNa
 {% endhighlight %}
 {% endtabs %}
 
-![Disable column reordering for specific columns](images/disable-column-reordering-for-specific-columns-placeholder.png)
+![Disable column reordering for specific columns](../images/disable-column-reorder.gif)
 
 ## Reorder columns programmatically
 
@@ -77,7 +77,7 @@ The following demonstrates how to reorder columns by placing **TaskName** to pos
 {% endhighlight %}
 {% endtabs %}
 
-![Reorder columns using field names](images/reorder-columns-using-field-names-placeholder.png)
+![Reorder columns using field names](../images/column-reorder-field-names.gif)
 
 ### Reorder columns using column index
 
@@ -99,7 +99,7 @@ The following demonstrates how to reorder the column at index **1** to position 
 {% endhighlight %}
 {% endtabs %}
 
-![Reorder columns using column index](images/reorder-columns-using-column-index-placeholder.png)
+![Reorder columns using column index](../images/column-reorder-using-index.gif)
 
 ### Reorder columns using target index
 
@@ -121,7 +121,7 @@ The following demonstrates how to reorder a single column **TaskId** to index **
 {% endhighlight %}
 {% endtabs %}
 
-![Reorder columns using target index](images/reorder-columns-using-target-index-placeholder.png)
+![Reorder columns using target index](../images/column-reorder-using-target-index.gif)
 
 ## Customize column reorder behavior using events
 
@@ -141,4 +141,4 @@ The following demonstrates how to handle specific fields during column reorderin
 {% endhighlight %}
 {% endtabs %}
 
-![Customize column reorder behavior using events](images/customize-column-reorder-behavior-using-events-placeholder.png)
+![Customize column reorder behavior using events](../images/column-reorder-events.gif)

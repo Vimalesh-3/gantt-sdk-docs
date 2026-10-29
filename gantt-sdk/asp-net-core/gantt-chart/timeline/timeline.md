@@ -3,7 +3,7 @@ layout: post
 title: Timeline in ASP.NET Core Gantt Chart | View Modes | Syncfusion
 description: Learn how to configure timeline in Syncfusion ASP.NET Core Gantt Chart with view modes, zooming, weekend highlighting, and templates to visualize project schedules.
 keywords: asp.net core gantt timeline, timeline view modes, timelinesettings, weekend highlight, syncfusion gantt
-canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/timeline
+canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/timeline
 platform: gantt-sdk
 control: Timeline - Gantt Chart
 documentation: ug
@@ -30,7 +30,7 @@ In Week mode, the top tier shows weeks and the bottom tier days, suitable for sh
 {% endhighlight %}
 {% endtabs %}
 
-![Week timeline mode](images/timeline-week-cs1-placeholder.png)
+![Week timeline mode](../images/timeline-week-cs1.png)
 
 ### Month timeline mode
 
@@ -45,7 +45,7 @@ In Month mode, the top tier shows months and the bottom tier weeks, ideal for me
 {% endhighlight %}
 {% endtabs %}
 
-![Month timeline mode](images/timeline-month-cs1-placeholder.png)
+![Month timeline mode](../images/timeline-month-cs1.png)
 
 ### Year timeline mode
 
@@ -60,7 +60,7 @@ In Year mode, the top tier shows years and the bottom tier months, suitable for 
 {% endhighlight %}
 {% endtabs %}
 
-![Year timeline mode](images/timeline-year-cs1-placeholder.png)
+![Year timeline mode](../images/timeline-year-cs1.png)
 
 ### Day timeline mode
 
@@ -75,7 +75,7 @@ In Day mode, the top tier shows days and the bottom tier hours, ideal for detail
 {% endhighlight %}
 {% endtabs %}
 
-![Day timeline mode](images/timeline-day-cs1-placeholder.png)
+![Day timeline mode](../images/timeline-day-cs1.png)
 
 ### Hour timeline mode
 
@@ -90,7 +90,7 @@ In Hour mode, the top tier shows hours and the bottom tier minutes, perfect for 
 {% endhighlight %}
 {% endtabs %}
 
-![Hour timeline mode](images/timeline-hour-cs1-placeholder.png)
+![Hour timeline mode](../images/timeline-hour-cs1.png)
 
 ### Minutes timeline mode
 
@@ -105,7 +105,7 @@ In Minutes timeline mode, the tier displays minute-level intervals, ideal for tr
 {% endhighlight %}
 {% endtabs %}
 
-![Minutes timeline mode](images/timeline-minutes-cs1-placeholder.png)
+![Minutes timeline mode](../images/timeline-minutes-cs1.png)
 
 ## Timeline view dates
 
@@ -120,7 +120,7 @@ The Gantt Chart control supports rendering a fixed timeline range using the [vie
 {% endhighlight %}
 {% endtabs %}
 
-![Timeline view dates](images/timeline-view-dates-cs1-placeholder.png)
+![Timeline view dates](../images/timeline-view-dates-cs1.png)
 
 **Key behaviors**
 
@@ -149,7 +149,7 @@ In the Gantt Chart component, you can customize the week start day using the [we
 {% endhighlight %}
 {% endtabs %}
 
-![Customize week start day](images/timeline-week-startday-cs1-placeholder.png)
+![Customize week start day](../images/timeline-week-startday-cs1.png)
 
 ## Customize automatic timescale update action
 
@@ -164,7 +164,7 @@ In the Gantt Chart component, the schedule timeline will be automatically update
 {% endhighlight %}
 {% endtabs %}
 
-![Customize automatic timescale update action](images/timeline-timescale-cs1-placeholder.png)
+![Customize automatic timescale update action](../images/timeline-timescale-cs1.png)
 
 ## Dynamically change timeline mode
 
@@ -179,7 +179,7 @@ You can dynamically change the timeline mode in the Gantt Chart by updating the 
 {% endhighlight %}
 {% endtabs %}
 
-![Dynamically change timeline mode](images/timeline-change-timeline-mode-placeholder.png)
+![Dynamically change timeline mode](../images/change-timeline-mode.gif)
 
 ## Timeline cells tooltip
 
@@ -194,7 +194,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 {% endhighlight %}
 {% endtabs %}
 
-![Timeline cells tooltip](images/tooltip-timelinecell-cs1-placeholder.png)
+![Timeline cells tooltip](../images/tooltip-timelinecell-cs1.png)
 
 ## Highlight weekends
 
@@ -209,7 +209,7 @@ Highlight weekends by setting [showWeekend](https://help.syncfusion.com/cr/aspne
 {% endhighlight %}
 {% endtabs %}
 
-![Highlight weekends](images/timeline-show-weekend-cs1-placeholder.png)
+![Highlight weekends](../images/timeline-show-weekend-cs1.png)
 
 **Limitations:**
 
@@ -234,7 +234,7 @@ You can adjust the Gantt chart view by shifting the timeline forward or backward
 {% endhighlight %}
 {% endtabs %}
 
-![Navigating Gantt Timeline](images/timeline-span-time-cs1-placeholder.png)
+![Navigating Gantt Timeline](../images/navigate-timeline.gif)
 
 ## Timeline template
 
@@ -257,7 +257,7 @@ The following code example how to customize the top tier to display the week's w
 {% endhighlight %}
 {% endtabs %}
 
-![Timeline template](images/tooltip-timelinecell-cs2-placeholder.png)
+![Timeline template](../images/tooltip-timelinecell-cs2.png)
 
 ## Infinite timeline scrolling
 
@@ -280,11 +280,11 @@ This feature enables exploration of long project schedules without manually upda
 {% endhighlight %}
 {% endtabs %}
 
-![Infinite timeline scrolling](images/timeline-infinite-timeline-cs1-placeholder.png)
+![Infinite timeline scrolling](../images/timeline-infinite-timeline-cs1.png)
 
 ## See also
 
 - [How to configure taskbars?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/taskbar/taskbar)
-- [How to zoom the timeline?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/zooming)
+- [How to zoom the timeline?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/zooming)
 - [How to configure non-working days?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/scheduling-tasks#weekend--non-working-days)
 - [How to configure non-working days?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/scheduling-tasks#weekend--non-working-days)

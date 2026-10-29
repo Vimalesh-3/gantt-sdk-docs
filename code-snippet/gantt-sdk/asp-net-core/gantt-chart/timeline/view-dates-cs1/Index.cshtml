@@ -1,7 +1,13 @@
 @page
 @model CoreSamples.Pages.IndexModel
+<ejs-gantt id="Gantt" dataSource="@Model.GanttData" height="430px" treeColumnIndex="1" projectStartDate="03/31/2019"
+           projectEndDate="04/13/2019">
+    
+    <e-gantt-taskfields id="TaskId" name="TaskName" startDate="StartDate" duration="Duration" progress="Progress"
+                        parentID="ParentId">
+    </e-gantt-taskfields>
 
-<ejs-gantt id="Gantt" dataSource="@Model.GanttData" height="430px" projectStartDate="new DateTime(2019, 3, 31)" projectEndDate="new DateTime(2019, 4, 13)">
-    <e-gantt-taskfields id="TaskId" name="TaskName" startDate="StartDate" duration="Duration" progress="Progress" parentID="ParentId"></e-gantt-taskfields>
-    <e-gantt-timelinesettings viewStartDate="new DateTime(2019, 4, 3)" viewEndDate="new DateTime(2019, 4, 7)"></e-gantt-timelinesettings>
+    <e-gantt-timelinesettings viewStartDate="04/03/2019" viewEndDate="04/07/2019">
+    </e-gantt-timelinesettings>
+
 </ejs-gantt>

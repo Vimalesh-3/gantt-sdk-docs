@@ -123,8 +123,8 @@ The following screen shot shows working time range in Gantt control.
 
 ![Alt text](./images/working-time-range.png)
 
-N>* Individual tasks can lie between any time within the defined working time range of the project.
-<br/>* The [`DayWorkingTime`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_DayWorkingTime) property is used to define the working time for the whole project.
+N>_ Individual tasks can lie between any time within the defined working time range of the project.
+<br/>_ The [`DayWorkingTime`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_DayWorkingTime) property is used to define the working time for the whole project.
 
 ## Weekend/Non-working days
 
@@ -143,7 +143,7 @@ Non-working days/weekend are used to represent the non-productive days in a proj
 
 N> By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 <br/> In the Gantt control, you can make weekend as working day by setting the [`IncludeWeekend`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.Gantt.html#Syncfusion_EJ2_Gantt_Gantt_IncludeWeekend) property to `true`.
-<br/> To show or hide weekend in timeline, use [timelineSettings.showWeekend](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.GanttTimelineSettings.html#Syncfusion_EJ2_Gantt_GanttTimelineSettings_ShowWeekend) property in `timelineSettings`. To know more about `showWeekend`, refer [here](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/time-line#showhide-weekends).
+<br/> To show or hide weekend in timeline, use [timelineSettings.showWeekend](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Gantt.GanttTimelineSettings.html#Syncfusion_EJ2_Gantt_GanttTimelineSettings_ShowWeekend) property in `timelineSettings`. To know more about `showWeekend`, refer [here](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/time-line#showhide-weekends).
 
 ### Configure days per week and month
 

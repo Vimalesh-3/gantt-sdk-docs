@@ -2,7 +2,8 @@
 @model CoreSamples.Pages.IndexModel
 
 <ejs-gantt id="Gantt" dataSource="@Model.GanttData" height="430px" treeColumnIndex="1" queryCellInfo="queryCellInfo">
-    <e-gantt-taskfields id="TaskId" name="TaskName" startDate="StartDate" endDate="EndDate" duration="Duration" progress="Progress" parentID="ParentId"></e-gantt-taskfields>
+    <e-gantt-taskfields id="TaskId" name="TaskName" startDate="StartDate" endDate="EndDate" duration="Duration"
+                        progress="Progress" parentID="ParentId"></e-gantt-taskfields>
     <e-gantt-splittersettings position="75%"></e-gantt-splittersettings>
     <e-gantt-columns>
         <e-gantt-column field="TaskId" headerText="Task ID" textAlign="Right" width="90"></e-gantt-column>

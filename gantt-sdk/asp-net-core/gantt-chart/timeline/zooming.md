@@ -3,7 +3,7 @@ layout: post
 title: Zooming in ASP.NET Core Gantt Chart | Syncfusion
 description: Learn how to implement zooming functionality in Syncfusion ASP.NET Core Gantt Chart timeline for detailed project view and scale adjustments.
 keywords: asp.net core gantt zooming, zoom in, zoom out, timeline zoom, zoom levels, gantt zoom, syncfusion gantt chart
-canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/zooming
+canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/zooming
 platform: gantt-sdk
 control: Timeline - Gantt Chart
 documentation: ug
@@ -52,9 +52,10 @@ In Gantt, the zoom in and zoom out actions are performed based on the predefined
 ## Zoom action by methods
 
 You can perform the various zoom actions dynamically or on external click action using the following methods:
-* Zoom in - `zoomIn`
-* Zoom out - `zoomOut`
-* Fit to project - `fitToProject`
+
+- Zoom in - `zoomIn`
+- Zoom out - `zoomOut`
+- Fit to project - `fitToProject`
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
