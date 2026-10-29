@@ -36,7 +36,7 @@ The React Gantt Chart component exposes 38 WebMCP tools that enable AI agents to
 
 ## Prerequisites
 
-- Syncfusion® React components
+- Syncfusion® Angular components
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -51,7 +51,7 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® components.
 
 ## Integrating WebMCP tools
-Follow these steps to integrate WebMCP support into Syncfusion® React components. The following example uses the React Gantt Chart component.
+Follow these steps to integrate WebMCP support into Syncfusion® Angular components. The following example uses the React Gantt Chart component.
 
 ### Step 1: Create an application
 Create an Angular application and integrate the Syncfusion® React Gantt Chart component by following the [Getting Started with React Gantt Chart](https://help.syncfusion.com/gantt-sdk/angular/gantt-chart/getting-started) guide. After completing the setup, follow the steps below to enable WebMCP integration.
@@ -60,13 +60,86 @@ Create an Angular application and integrate the Syncfusion® React Gantt Chart c
 Import the WebMcpGantt module and inject it into the component to make WebMCP functionality available.
 
 ```ts
-import React from 'react';
-import { GanttComponent, Inject, Selection, Sort, Filter, Toolbar, Edit, PdfExport, CriticalPath, WebMcpGantt } from '@syncfusion/ej2-react-gantt';
+import { Component } from '@angular/core';
+import { GanttModule, SelectionService, SortService, FilterService, ToolbarService, EditService, WebMcpGantt } from '@syncfusion/ej2-react-gantt';
 
-export default function App() {
-  return <GanttComponent dataSource={[]} taskFields={{ id: 'TaskID', name: 'TaskName', startDate: 'StartDate', duration: 'Duration', progress: 'Progress', dependency: 'Dependency', child: 'ChildTasks' }} enableWebMcp={true} allowSorting={true} allowFiltering={true} allowSelection={true} height='450px'>
-    <Inject services={[Selection, Sort, Filter, Toolbar, Edit, PdfExport, CriticalPath, WebMcpGantt]} />
-  </GanttComponent>;
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [GanttModule],
+  providers: [WebMcpGantt, SelectionService, SortService, FilterService, ToolbarService, EditService],
+  template: `
+    <ejs-gantt
+      [dataSource]="data"
+      [taskFields]="taskFields"
+      [editSettings]="editSettings"
+      [toolbar]="toolbar"
+      enableWebMcp={true}
+      [allowSorting]="true"
+      [allowFiltering]="true"
+      [allowSelection]="true"
+      height="450px">
+    </ejs-gantt>
+  `
+})
+export class AppComponent {
+
+  public editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
+  };
+
+  public toolbar: string[] = ['Add','Edit','Delete','Update','Cancel'];
+
+  public data: Object[] = [
+    {
+      TaskID: 1,
+      TaskName: 'Project Planning',
+      StartDate: new Date('2025-01-06'),
+      Duration: 5,
+      Progress: 70,
+      ChildTasks: [
+        {
+          TaskID: 2,
+          TaskName: 'Requirement Analysis',
+          StartDate: new Date('2025-01-06'),
+          Duration: 3,
+          Progress: 100
+        },
+        {
+          TaskID: 3,
+          TaskName: 'Design phase',
+          StartDate: new Date('2025-01-09'),
+          Duration: 4,
+          Progress: 60,
+          Dependency: '2',
+          ChildTasks: [
+            {
+              TaskID: 4,
+              TaskName: 'UI Review',
+              StartDate: new Date('2025-01-10'),
+              Duration: 3,
+              Progress: 20,
+              Dependency: '3'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  public taskFields: Object = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Dependency',
+    child: 'ChildTasks'
+  };
 }
 ```
 
@@ -80,7 +153,91 @@ For example, a component may expose tools such as:
 An AI assistant can discover these tools and invoke them based on user prompts.
 
 ```ts
-<GanttComponent dataSource={data} taskFields={{ id: 'TaskID', name: 'TaskName', startDate: 'StartDate', duration: 'Duration', progress: 'Progress', dependency: 'Dependency', child: 'ChildTasks' }} />
+import { Component } from '@angular/core';
+import { GanttModule, SelectionService, SortService, FilterService, ToolbarService, EditService, WebMcpGantt } from '@syncfusion/ej2-react-gantt';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [GanttModule],
+  providers: [WebMcpGantt, SelectionService, SortService, FilterService, ToolbarService, EditService],
+  template: `
+    <ejs-gantt
+      [dataSource]="data"
+      [taskFields]="taskFields"
+      [editSettings]="editSettings"
+      [toolbar]="toolbar"
+      [webMcpSettings]="webMcpSettings"
+      enableWebMcp={true}
+      [allowSorting]="true"
+      [allowFiltering]="true"
+      [allowSelection]="true"
+      height="450px">
+    </ejs-gantt>
+  `
+})
+export class AppComponent {
+  public webMcpSettings = {
+    tools: []
+  };
+
+  public editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
+  };
+
+  public toolbar: string[] = ['Add','Edit','Delete','Update','Cancel'];
+
+  public data: Object[] = [
+    {
+      TaskID: 1,
+      TaskName: 'Project Planning',
+      StartDate: new Date('2025-01-06'),
+      Duration: 5,
+      Progress: 70,
+      ChildTasks: [
+        {
+          TaskID: 2,
+          TaskName: 'Requirement Analysis',
+          StartDate: new Date('2025-01-06'),
+          Duration: 3,
+          Progress: 100
+        },
+        {
+          TaskID: 3,
+          TaskName: 'Design phase',
+          StartDate: new Date('2025-01-09'),
+          Duration: 4,
+          Progress: 60,
+          Dependency: '2',
+          ChildTasks: [
+            {
+              TaskID: 4,
+              TaskName: 'UI Review',
+              StartDate: new Date('2025-01-10'),
+              Duration: 3,
+              Progress: 20,
+              Dependency: '3'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  public taskFields: Object = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Dependency',
+    child: 'ChildTasks'
+  };
+}
 ```
 
 ### Step 4: Customize tool registration
@@ -93,7 +250,121 @@ Use the `webMcpSettings` property to customize how WebMCP tools are exposed to A
 | `exposedTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
 
 ```ts
-<GanttComponent dataSource={data} taskFields={{ id: 'TaskID', name: 'TaskName', startDate: 'StartDate', duration: 'Duration', progress: 'Progress', dependency: 'Dependency', child: 'ChildTasks' }} editSettings={{ allowAdding: true, allowEditing: true, allowDeleting: true, allowTaskbarEditing: true, showDeleteConfirmDialog: true }} toolbar={['Add', 'Edit', 'Delete', 'Update', 'Cancel']} webMcpSettings={{ tools: [] }} enableWebMcp={true} allowSorting={true} allowFiltering={true} allowSelection={true} height='450px'><Inject services={[Selection, Sort, Filter, Toolbar, Edit, PdfExport, CriticalPath, WebMcpGantt]} /></GanttComponent>
+import { Component } from '@angular/core';
+import { GanttModule, SelectionService, SortService, FilterService, ToolbarService, EditService, WebMcpGantt } from '@syncfusion/ej2-react-gantt';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [GanttModule],
+  providers: [WebMcpGantt,SelectionService,SortService,FilterService,ToolbarService,EditService],
+  template: `
+    <ejs-gantt
+      [dataSource]="data"
+      [taskFields]="taskFields"
+      enableWebMcp={true}
+      [webMcpSettings]="webMcpSettings"
+      [editSettings]="editSettings"
+      [toolbar]="toolbar"
+      [allowSorting]="true"
+      [allowFiltering]="true"
+      [allowSelection]="true"
+      (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)"
+      height="450px">
+    </ejs-gantt>
+  `
+})
+export class AppComponent {
+
+  public editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
+  };
+
+  public toolbar: string[] = ['Add','Edit','Delete','Update','Cancel'];
+
+  public webMcpSettings = {
+    name: 'project',
+    tools: ['createTask', 'deleteTask', 'updateTask', 'getProjectTasks'],
+    exposedTo: ['https://www.syncfusion.com/']
+  };
+
+  public data: Object[] = [
+    {
+      TaskID: 1,
+      TaskName: 'Project Planning',
+      StartDate: new Date('2025-01-06'),
+      Duration: 5,
+      Progress: 70,
+      ChildTasks: [
+        {
+          TaskID: 2,
+          TaskName: 'Requirement Analysis',
+          StartDate: new Date('2025-01-06'),
+          Duration: 3,
+          Progress: 100
+        },
+        {
+          TaskID: 3,
+          TaskName: 'Design phase',
+          StartDate: new Date('2025-01-09'),
+          Duration: 4,
+          Progress: 60,
+          Dependency: '2',
+          ChildTasks: [
+            {
+              TaskID: 4,
+              TaskName: 'UI Review',
+              StartDate: new Date('2025-01-10'),
+              Duration: 3,
+              Progress: 20,
+              Dependency: '3'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  public taskFields: Object = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Dependency',
+    child: 'ChildTasks'
+  };
+
+  public beforeWebMcpToolExecute(args: any): void {
+    if (args.toolName === 'deleteTask') {
+      const task = args.data;
+      if (task && !task.parentItem) {
+        args.cancel = true;
+        console.log('Root-level tasks cannot be deleted.');
+      }
+    }
+
+    if (args.toolName === 'updateTask') {
+      const task = args.data;
+      if (task && task.Progress === 100) {
+        args.cancel = true;
+        console.log('Completed tasks cannot be edited.');
+      }
+    }
+
+    if (args.toolName === 'updateProjectDates') {
+      const approved = false;
+      if (!approved) {
+        args.cancel = true;
+        console.log('Approval is required before changing project dates.');
+      }
+    }
+  }
+}
 ```
 
 > Use the `exposedTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
@@ -109,7 +380,120 @@ The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This
 > AI-generated requests should always be validated before executing write operations. Restrict access using `exposedTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
 
 ```ts
-<GanttComponent dataSource={data} taskFields={{ id: 'TaskID', name: 'TaskName', startDate: 'StartDate', duration: 'Duration', progress: 'Progress', dependency: 'Dependency', child: 'ChildTasks' }} editSettings={{ allowAdding: true, allowEditing: true, allowDeleting: true, allowTaskbarEditing: true, showDeleteConfirmDialog: true }} webMcpSettings={{ name: 'project', tools: ['createTask', 'deleteTask', 'updateTask', 'getProjectTasks'] }} toolbar={['Add', 'Edit', 'Delete', 'ExpandAll', 'CollapseAll', 'Search', 'ZoomIn', 'ZoomOut', 'ZoomToFit', 'PdfExport']} enableWebMcp={true} allowSorting={true} allowFiltering={true} allowSelection={true} height='450px' beforeWebMcpToolExecute={beforeWebMcpToolExecute}><Inject services={[Selection, Sort, Filter, Toolbar, Edit, PdfExport, CriticalPath, WebMcpGantt]} /></GanttComponent>
+import { Component } from '@angular/core';
+import { GanttModule, SelectionService, SortService, FilterService, ToolbarService, EditService, WebMcpGantt } from '@syncfusion/ej2-react-gantt';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [GanttModule],
+  providers: [WebMcpGantt,SelectionService,SortService,FilterService,ToolbarService,EditService],
+  template: `
+    <ejs-gantt
+      [dataSource]="data"
+      [taskFields]="taskFields"
+      enableWebMcp={true}
+      [webMcpSettings]="webMcpSettings"
+      [editSettings]="editSettings"
+      [toolbar]="toolbar"
+      [allowSorting]="true"
+      [allowFiltering]="true"
+      [allowSelection]="true"
+      (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)"
+      height="450px">
+    </ejs-gantt>
+  `
+})
+export class AppComponent {
+  public data: Object[] = [
+    {
+      TaskID: 1,
+      TaskName: 'Project Planning',
+      StartDate: new Date('2025-01-06'),
+      Duration: 5,
+      Progress: 70,
+      ChildTasks: [
+        {
+          TaskID: 2,
+          TaskName: 'Requirement Analysis',
+          StartDate: new Date('2025-01-06'),
+          Duration: 3,
+          Progress: 100
+        },
+        {
+          TaskID: 3,
+          TaskName: 'Design phase',
+          StartDate: new Date('2025-01-09'),
+          Duration: 4,
+          Progress: 60,
+          Dependency: '2',
+          ChildTasks: [
+            {
+              TaskID: 4,
+              TaskName: 'UI Review',
+              StartDate: new Date('2025-01-10'),
+              Duration: 3,
+              Progress: 20,
+              Dependency: '3'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  public taskFields: Object = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Dependency',
+    child: 'ChildTasks'
+  };
+
+  public editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
+  };
+
+  public webMcpSettings = {
+    name: 'project',
+    tools: ['createTask', 'deleteTask', 'updateTask', 'getProjectTasks'],
+    exposedTo: ['https://www.syncfusion.com/']
+  };
+
+  public toolbar: string[] = ['Add','Edit','Delete','ExpandAll','CollapseAll','Search','ZoomIn','ZoomOut','ZoomToFit','PdfExport'];
+
+  public beforeWebMcpToolExecute(args: any): void {
+    if (args.toolName === 'deleteTask') {
+      const task = args.data;
+      if (task && !task.parentItem) {
+        args.cancel = true;
+        console.log('Root-level tasks cannot be deleted.');
+      }
+    }
+
+    if (args.toolName === 'updateTask') {
+      const task = args.data;
+      if (task && task.Progress === 100) {
+        args.cancel = true;
+        console.log('Completed tasks cannot be edited.');
+      }
+    }
+
+    if (args.toolName === 'updateProjectDates') {
+      const approved = false;
+      if (!approved) {
+        args.cancel = true;
+        console.log('Approval is required before changing project dates.');
+      }
+    }
+  }
+}
 ```
 
 ## Best practices
