@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeline in ASP.NET Core Gantt Chart | View Modes | Syncfusion
-description: Learn how to configure timeline in Syncfusion ASP.NET Core Gantt Chart with view modes, zooming, weekend highlighting, and templates to visualize project schedules.
+description: Configure the timeline in Syncfusion ASP.NET Core Gantt Chart using view modes, zoom levels, weekend highlights, and custom templates.
 keywords: asp.net core gantt timeline, timeline view modes, timelinesettings, weekend highlight, syncfusion gantt
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/timeline
 platform: gantt-sdk

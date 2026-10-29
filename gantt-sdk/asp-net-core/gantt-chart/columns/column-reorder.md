@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reorder Columns in ASP.NET Core Gantt Chart | Drag & Drop | Syncfusion
-description: Learn how to reorder columns in Syncfusion ASP.NET Core Gantt Chart with drag-and-drop or programmatically, with options to restrict reordering for specific columns.
+description: Learn how to reorder columns in the Syncfusion ASP.NET Core Gantt Chart using drag-and-drop or programmatically, and control reordering for specific columns.
 keywords: asp.net core gantt reorder columns, allowreordering, drag and drop, column reorder, syncfusion gantt
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/columns/column-reorder
 platform: gantt-sdk
@@ -11,7 +11,7 @@ domainurl: https://help.syncfusion.com/gantt-sdk
 appliesto: UI Component Suite, Gantt SDK
 ---
 
-# Column Reordering with Drag and Drop Support in ASP.NET Core Gantt Chart
+# Column Reorder with Drag and Drop Support in ASP.NET Core Gantt Chart
 
 The [ASP.NET Core Gantt Chart](https://www.syncfusion.com/aspnet-core-ui-controls/gantt-chart) component supports column reordering by dragging a column header to a new position. 
 
