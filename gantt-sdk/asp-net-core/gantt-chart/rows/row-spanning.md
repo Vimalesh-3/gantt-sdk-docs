@@ -11,7 +11,7 @@ domainurl: https://help.syncfusion.com/gantt-sdk
 appliesto: UI Component Suite, Gantt SDK
 ---
 
-# Implementing Row Spanning for Multi-Row Cells in ASP.NET Core Gantt Chart
+# Row Spanning in ASP.NET Core Gantt Chart
 
 The [ASP.NET Core Gantt Chart](https://www.syncfusion.com/aspnet-core-ui-controls/gantt-chart) component supports row cell spanning, allowing multiple cells in a row to merge into a single cell. This is useful for displaying shared information across rows without duplication.
 

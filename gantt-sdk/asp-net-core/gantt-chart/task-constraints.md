@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Constraints in ASP.NET Core Gantt Chart | Syncfusion
-description: Learn how to configure task constraints in the Syncfusion ASP.NET Core Gantt Chart to enforce scheduling rules, manage deadlines, and ensure accurate project milestone planning.
+description: Learn how to configure task constraints in Syncfusion ASP.NET Core Gantt Chart to enforce scheduling rules, manage deadlines, and track milestones.
 keywords: asp.net core gantt task constraints, scheduling rules, muststarton, mustfinishon, assoon aspossible, syncfusion gantt
 canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/task-constraints
 platform: gantt-sdk
@@ -100,12 +100,12 @@ Setting a flag to **true** cancels updates without a popup; **false** (default) 
 
 ```javascript
 function actionBegin(args) {
-  if (args.requestType === 'validateTaskViolation') {
+  if (args.requestType === "validateTaskViolation") {
     args.validateMode = {
       respectMustStartOn: true,
       respectMustFinishOn: true,
       respectStartNoLaterThan: true,
-      respectFinishNoLaterThan: true
+      respectFinishNoLaterThan: true,
     };
   }
 }

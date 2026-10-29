@@ -3,7 +3,7 @@ layout: post
 title: Timeline in ASP.NET Core Gantt Chart | View Modes | Syncfusion
 description: Configure the timeline in Syncfusion ASP.NET Core Gantt Chart using view modes, zoom levels, weekend highlights, and custom templates.
 keywords: asp.net core gantt timeline, timeline view modes, timelinesettings, weekend highlight, syncfusion gantt
-canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/timeline
+canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/timeline
 platform: gantt-sdk
 control: Timeline - Gantt Chart
 documentation: ug
@@ -285,6 +285,6 @@ This feature enables exploration of long project schedules without manually upda
 ## See also
 
 - [How to configure taskbars?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/taskbar/taskbar)
-- [How to zoom the timeline?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/zooming)
+- [How to zoom the timeline?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/zooming)
 - [How to configure non-working days?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/scheduling-tasks#weekend--non-working-days)
 - [How to configure non-working days?](https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/scheduling-tasks#weekend--non-working-days)

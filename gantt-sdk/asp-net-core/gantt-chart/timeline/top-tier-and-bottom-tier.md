@@ -3,7 +3,7 @@ layout: post
 title: Timeline Tiers in ASP.NET Core Gantt Chart | Syncfusion
 description: Learn how to configure timeline tiers in Syncfusion ASP.NET Core Gantt Chart including top tier and bottom tier for hierarchical date display.
 keywords: asp.net core gantt timeline tiers, timeline hierarchy, top tier, bottom tier, timeline configuration, syncfusion gantt chart
-canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/timeline/top-tier-and-bottom-tier
+canonical: https://help.syncfusion.com/gantt-sdk/asp-net-core/gantt-chart/time-line/top-tier-and-bottom-tier
 platform: gantt-sdk
 control: Timeline - Gantt Chart
 documentation: ug
